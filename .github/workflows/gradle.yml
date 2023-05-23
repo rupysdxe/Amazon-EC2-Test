@@ -30,7 +30,7 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         source: "build/libs/app-1.0.jar"
-        target: SB/
+        target: SB/jars
         rm: true
         strip_components: 2
     - name: executing remote ssh commands using password
