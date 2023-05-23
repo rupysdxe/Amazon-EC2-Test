@@ -28,4 +28,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/AmazonEC2-test:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/test:latest
