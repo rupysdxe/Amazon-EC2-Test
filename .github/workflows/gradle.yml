@@ -29,5 +29,5 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
-        source: "Dockerfile"
-        target: home/ec2-user/
+        source: "build/libs/app-1.0.jar"
+        target: SB/
