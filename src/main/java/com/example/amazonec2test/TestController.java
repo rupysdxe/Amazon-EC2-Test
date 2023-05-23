@@ -11,6 +11,6 @@ public class TestController {
 
        @GetMapping("/test")
         public ResponseEntity<String> hello() {
-            return ResponseEntity.ok("Every Thing is working fine");
+            return ResponseEntity.ok(" Thing is working fine");
         }
 }
