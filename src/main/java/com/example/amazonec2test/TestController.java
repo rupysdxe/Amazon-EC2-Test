@@ -11,6 +11,6 @@ public class TestController {
 
        @GetMapping("/test")
         public ResponseEntity<String> hello() {
-            return ResponseEntity.ok("FINAL Testing CI/CD");
+            return ResponseEntity.ok("FINAL Testing CI/CD without Dockerhub");
         }
 }
