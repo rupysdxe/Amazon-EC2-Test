@@ -31,3 +31,4 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         source: "build/libs/app-1.0.jar"
         target: SB/
+        rm: true
