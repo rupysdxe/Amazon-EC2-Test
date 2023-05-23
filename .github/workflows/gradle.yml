@@ -32,3 +32,4 @@ jobs:
         source: "build/libs/app-1.0.jar"
         target: SB/
         rm: true
+        strip_components: 2
