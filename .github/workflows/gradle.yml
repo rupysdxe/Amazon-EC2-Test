@@ -27,7 +27,7 @@ jobs:
       uses: mr-smithers-excellent/docker-build-push@v4
       with:
         image: rupeshdangi156/testec2
-        tags: v1, latest
+        tags: ${{ secrets.DOCKER_USERNAME }}testec2/:latest
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
