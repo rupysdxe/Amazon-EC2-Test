@@ -19,11 +19,12 @@ jobs:
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
-
+    - name: Go to project-1 directory
+      run: cd project-1
     - name: Build with Gradle
       run: ./gradlew build
 
-    - name: copy file via ssh password
+    - name: copy file via SCP
       uses: appleboy/scp-action@v0.1.4
       with:
         host: ${{ secrets.HOST }}
@@ -33,7 +34,7 @@ jobs:
         target: SB/jars
         rm: true
         strip_components: 2
-    - name: executing remote ssh commands using password
+    - name: executing remote via SSH
       uses: appleboy/ssh-action@v0.1.10
       with:
         host: ${{ secrets.HOST }}
