@@ -20,7 +20,7 @@ jobs:
     - name: Build with Gradle
       run: |
         cd project-1
-        gradle clean build
+        gradle build
 
     - name: copy file via SCP
       uses: appleboy/scp-action@v0.1.4
@@ -28,7 +28,7 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
-        source: "build/libs/app-1.0.jar"
+        source: "project-1/build/libs/app-1.0.jar"
         target: SB/jars
         rm: true
         strip_components: 2
