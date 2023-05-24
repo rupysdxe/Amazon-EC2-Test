@@ -31,7 +31,7 @@ jobs:
         source: "project-1/build/libs/app-1.0.jar"
         target: SB/jars
         rm: true
-        strip_components: 2
+        strip_components: 3
     - name: executing remote via SSH
       uses: appleboy/ssh-action@v0.1.10
       with:
@@ -39,6 +39,6 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         script: |
-          cd SB/jars
+          cd SB
           sudo docker-compose down
           sudo docker-compose up --build -d
