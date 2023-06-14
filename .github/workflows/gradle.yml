@@ -20,3 +20,23 @@ jobs:
             else
                 echo "Docker is installed. Good to Go!"
             fi
+      - name: Copy folder content recursively to remote
+        uses: garygrossgarten/github-action-scp@release
+        with:
+          local: Connect-Uni-BE/deploy
+          remote: Backend
+          rmRemote: true
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+
+      - name: executing remote via SSH
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          script: |
+            cd Backend
+            docker-compose down
+            docker-compose up --build -d
