@@ -16,9 +16,7 @@ jobs:
             then
                echo "Docker could not be found. Please install docker first."
                sudo apt update
-               sudo apt install docker.io docker-compose -y
-               sudo usermod -aG docker ${USER}
-               su - ${USER}
+               sudo apt install docker.io docker-compose -y        
             else
                 echo "Docker is installed. Good to Go!"
             fi
