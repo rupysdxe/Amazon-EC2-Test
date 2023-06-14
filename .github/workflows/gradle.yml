@@ -10,7 +10,7 @@ jobs:
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.PASSWORD }}
+          password: ${{ secrets.PASSWORD }}
           script: |
             if ! command -v docker &> /dev/null
             then
